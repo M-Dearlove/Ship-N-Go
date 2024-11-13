@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+body{
+    /*background-color: #007bff;*/
+    background-color: #093145;
+}
+>>>>>>> Stashed changes
 header {
     padding: 15px 6% 15px 0;
     display: flex;
@@ -44,3 +51,66 @@ nav a {
     padding-left: 25px;
 }
 
+<<<<<<< Updated upstream
+=======
+.page-section{
+    text-align: center;
+    color: #D9D9D9;
+}
+
+#pop-up{
+    align-items: center;
+}
+
+/*Bundy Test CSS for JavaScript*/
+/*Modified by Kyle*/
+.card {
+    width: 200px;
+    padding: 20px;
+    /*The four lines of code below places the card containers in the middle*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*margin: 10px;*/
+    background-color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Popup container styling */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+/* Popup content styling */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.close-btn {
+    margin-top: 15px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+#small-card{
+    display: block;
+    align-items: center;
+}
+>>>>>>> Stashed changes

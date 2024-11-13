@@ -30,3 +30,9 @@ window.addEventListener("click", (event) => {
         popup.style.display = "none";
     }
 });
+
+//Dropdown Menu Trigger
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, {});
+  });
