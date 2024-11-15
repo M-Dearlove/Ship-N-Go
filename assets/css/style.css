@@ -1,14 +1,9 @@
 body{
-    /*background-color: #007BFF;*/
+
+    /*background-color: #007bff;*/
     background-color: #093145;
 }
-:root {
-    --primary: rgba(68, 88, 119, 1);
-    --secondary: rgba(146, 204, 206, 1);
-    --tertiary: rgba(49, 52, 61, 1);
-    --dark: rgba(28, 29, 33, 1);
-    --light: rgba(238, 238, 247, 1);
-  }
+
 header {
     padding: 15px 6% 15px 0;
     display: flex;
@@ -18,18 +13,23 @@ header {
     align-items: center;
     background-color: #565656
 }
+
 header h1 {
     color: #D9D9D9;
     padding: 5px 1% 5px 6%;
     margin: 0;
     font-size: 4vw;
-    line-height: 1;
+
+    line-height: 1; 
 }
+
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
 nav a {
     text-decoration: none;
     padding: 5px 10px;
@@ -37,24 +37,64 @@ nav a {
     font-size: 1.4rem;
     color: #D9D9D9;
 }
+
 .page-footer {
     color: #D9D9D9;
     background-color: #565656
 }
+
 .page-footer #contact {
     padding-left: 15px;
     text-decoration: underline;
 }
+
 .page-footer p {
     padding-left: 25px;
 }
+
 .page-section{
     text-align: center;
     color: #D9D9D9;
 }
+
 #pop-up{
     align-items: center;
 }
+
+/*Stylying for form popup and form content*/
+
+#form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.form-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reserve-btn {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #138049;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /*Bundy Test CSS for JavaScript*/
 /*Modified by Kyle*/
 .card {
@@ -66,7 +106,7 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50%);
     /*margin: 10px;*/
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
     text-align: center;
     cursor: pointer;
     border: 1px solid #ccc;
@@ -83,6 +123,7 @@ nav a {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 1000; /*Testing a fix for popup box*/
 }
 /* Popup content styling */
 .popup-content {
@@ -97,36 +138,13 @@ nav a {
     margin-top: 15px;
     padding: 10px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #007bff;
+
     color: #fff;
     border: none;
     border-radius: 5px;
 }
 #small-card{
-    display: flex;
-    text-align: center;
-    border: 5px solid #565656;
-    ;
-}
-#medium-card{
-    display: flex;
+    display: block;
     align-items: center;
-    border: 5px solid #565656;
-}
-#large-card{
-    display: flex;
-    align-items: center;
-    border: 5px solid #565656;
-}
-.flex-container{
-text-align: center;
-background-size: cover;
-background-position: center;
-background-blend-mode: soft-light;
-min-height: 15vh;
-color: var(--light);
-padding: 2% 6%;
-display: flex;
-justify-content: center;
-align-items: center;
 }

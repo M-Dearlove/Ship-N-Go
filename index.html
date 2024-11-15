@@ -13,13 +13,33 @@
             <h1>Ship-N-Go</h1>
             <nav>
                 <a href="#Top">Home</a>
-                <a href="Pages/about.html">About</a>
+                <a href="about.html">About</a>
                 <a href="#Rentals">Mailbox Rental</a>
-                <a href="Pages/services.html">Services</a>
+                <a href="services.html">Services</a>
                 <a href="#Contact">Contact Us</a>
             </nav>
         </header>
         <main>
+        
+        <!--Form Popup Structure-->
+        <div id="form-popup" style="display: none;">
+            <div class="form-content">
+                <h2>Reserve Mailbox</h2>
+                <form id="reservation-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <button type="submit">Submit Reservation</button>
+                </form>
+                <button id="close-form-popup" class="close-btn">Close</button>
+            </div>
+        </div>
             <!-- Popup Container -->
         <div id="popup">
          <div class="popup-content">
@@ -30,7 +50,10 @@
                 <span id="lease-term"></span>
             </p>
             <button id="close-popup" class="close-btn">Close</button>
+            <!--Reserve Button in First Popup-->
+            <button id="reserve-popup" class="reserve-btn">Reserve</button>
             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Lease term</a>
+
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content'>
                 <li><a href="#!">Monthly</a></li>
@@ -42,29 +65,38 @@
          </div>
         </div>
             <section class="page-section">
+
                 <h2 id="Rentals">Mailbox Rentals</h2>
                 <img src="assets/images/mailboxbank.png" alt="mailboxbank" style="width:800px;height:800px;">
+
                 <div class="flex-container">
+
                     <div class="flex-item small">
                         <h3>Small</h3>
-                        <img src="assets/images/small mailbox.png"  alt="small mailbox" style="width:700px;height:700px;">
-                          <p id="small-card" class="card" style="background-color: black;">Reserve a Small Mailbox</p>
+                        <img src="assets/images/small mailbox.png" alt="small mailbox" style="width:700px;height:700px;">
+                          <p id="small-card" class="card">Small Mailbox</p>
                     </div>
+
                     <div class="flex-item medium">
                         <h3>Medium</h3>
                         <img src="assets/images/medium mailbox.png" alt="medium mailbox" style="width:700px;height:700px;">
-                        <div id="medium-card" class="card" style="background-color: black;">Reserve a Medium Mailbox</div>
+                        <div id="medium-card" class="card">Medium Mailbox</div>
                     </div>
+
                     <div class="flex-item large">
                         <h3>Large</h3>
                         <img src="assets/images/large mailbox.png" alt="large mailbox" style="width:700px;height:700px;">
-                        <div id="large-card" class="card" font size="3" style="background-color: black;">Reserve a Large Mailbox</div>
+                        <div id="large-card" class="card">Large Mailbox</div>
                     </div>
+
                 </div>
+
             </section>
+
             <section class="page-section">
                 <h2 id="Services">Additional Services</h2>
             </section>
+
         </main>
         <footer class = "page-footer">
             <h2 id="Contact">Contact Us</h2>
