@@ -1,2 +1,2 @@
-# Team-6-Project-1
-This repository contains team six's files for implementing an event scheduler for a gaming website. 
+# Team Ship-N-GO
+This repository contains team Ship-N-GO's files for implementing an event scheduler for a gaming website. 
