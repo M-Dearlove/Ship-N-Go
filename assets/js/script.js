@@ -4,6 +4,10 @@ const popupInfo = document.getElementById("popup-info");
 const closePopup = document.getElementById("close-popup");
 const baseInfo = document.getElementById("base-info");
 const leaseTerm = document.getElementById("lease-term");
+const reservePopup = document.getElementById("reserve-popup");
+const formPopup = document.getElementById("form-popup");
+const closeFormPopup = document.getElementById("close-form-popup");
+const reservationForm = document.getElementById("reservation-form");
 
 const mailboxRates = {
     "Small Mailbox": 20,
@@ -47,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Dropdown.init(elems, {});
   });
 
+//Initially hides the reserve button
+reservePopup.style.display = "none";
+
+//Dropdown menu event listener
 document.querySelectorAll("#dropdown1 li a").forEach(item => {
     item.addEventListener("click", (event) => {
         const selectedTerm = event.target.textContent;
@@ -72,5 +80,27 @@ document.querySelectorAll("#dropdown1 li a").forEach(item => {
         }
         leaseTerm.textContent = `- Lease term: ${selectedTerm} (Total: $${totalCost})`;
         
+        reservePopup.style.display = "inline-block";
+
     });
+
+reservePopup.addEventListener("click", () => {
+    formPopup.style.display = "flex";
+});
+
+closeFormPopup.addEventListener("click", () => {
+    formPopup.style.display = "none";
+});
+
+reservationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+
+    alert(`Reservation submitted for ${name}!`);
+
+    formPopup.style.display = "none";
+});
+
 });

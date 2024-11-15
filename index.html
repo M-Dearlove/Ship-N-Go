@@ -1,4 +1,4 @@
-<!DOCTYPE = html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -21,6 +21,26 @@
             </nav>
         </header>
         <main>
+        
+        <!--Form Popup Structure-->
+        <div id="form-popup" style="display: none;">
+            <div class="form-content">
+                <h2>Reserve Mailbox</h2>
+                <form id="reservation-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <button type="submit">Submit Reservation</button>
+                </form>
+                <button id="close-form-popup" class="close-btn">Close</button>
+            </div>
+        </div>
             <!-- Popup Container -->
         <div id="popup">
          <div class="popup-content">
@@ -31,6 +51,8 @@
                 <span id="lease-term"></span>
             </p>
             <button id="close-popup" class="close-btn">Close</button>
+            <!--Reserve Button in First Popup-->
+            <button id="reserve-popup" class="reserve-btn">Reserve</button>
             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Lease term</a>
 
             <!-- Dropdown Structure -->
