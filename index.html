@@ -7,8 +7,13 @@
         
 
 
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel ="stylesheet" href="./assets/css/style.css">
+
+
+        <link rel ="stylesheet" href="./assets/css/style.css"/>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        <title>Ship & Go</title>
+
     </head>
     
 
@@ -45,119 +50,80 @@
 
 
 
-      <!---
-        <header class="header" id="showUp">
-            <h1>Ship-N-Go</h1> 
-            <nav>
-                <a href="#Home">Home</a>
-                <a href="#About">About</a>
-                <a href="#Rentals">Services</a>
-                <a href="#Services">Gallery</a>
-                <a href="#Contact">Contact Us</a>
-            </nav>
+      
         </header>
-    -->
-<!--
-<header class="header">
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-    </header>
--->
+        <main>
+            <!-- Popup Container -->
+        <div id="popup">
+         <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <p id="popup-info"></p>
+            <button id="close-popup" class="close-btn">Close</button>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Lease term</a>
 
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Monthly</a></li>
+                <li><a href="#!">3 months</a></li>
+                <li><a href="#!">6 months</a></li>
+                <li><a href="#!">9 months</a></li>
+                <li><a href="#!">Yearly</a></li>
+            </ul>
 
-
-<!--popup container-->
-<div id="popup">
-    <div id="popup-content">
-   <h2 id="popup-title"></h2>
-   <p id="popup-info"></p>
-   <button id="close-popup" class="close-btn">close</button>
-   <a class='dropdown-trigger btn' href="#" data-target = 'dropdown-1'></a>
-   <!--dropdown-->
-   <ul id="dropdown-1" class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-   
-   
-    </div>
-   </div>
-
-
-
-
-<main>
-
-
-
-
-
-
-
-
-            <!--first image in the body-->
+         </div>
+        </div>
             <section class="page-section">
-                <h2> Mailbox Rentals </h2>
+
+                <h2 id="Rentals">Mailbox Rentals</h2>
+                <img src="assets/images/mailboxbank.png" alt="mailboxbank" style="width:800px;height:800px;">
+
                 <div class="flex-container">
-                    <div class="small-item">
-                        <img src="./assets/images/mailbox-rental1a.jpg" alt="Name of image" class="mailBox-image" id="smallMailbox"; />
-                 <h3>Small</h3>
-               
-    <button type="button" class="btn btn-primary btn-sm " id="small-card"> Click here for more</button>
-</div>
 
-
-<!--second image in the body-->
-
-                    <div class="small-item ">
-                        <img  src="./assets/images/Mailbox-rental-photo-.jpg" alt="Name of image" class="mailBox-image" id="mediumMailbox"/>
-                          <h3 >Medium</h3>
-<button type="button" class="btn btn-primary btn-sm " id="medium-card"> Click here for more</button>
-</div>
-
-
-
-                          
-<!--third image in the body-->
-                    <div class="small-item">
-                        <img src="./assets/images/Mailbox-rental-photo-.jpg" alt="Name of image" class="mailBox-image"  id="largeMailbox"/>
-                        <h3>Large</h3>
-                        <button type="button" class="btn btn-primary btn-sm "id="large-card"> Click here for more</button>
+                    <div class="flex-item small">
+                        <h3>Small</h3>
+                        <img src="assets/images/small mailbox.png" alt="small mailbox" style="width:700px;height:700px;">
+                          <p id="small-card" class="card">Small Mailbox</p>
                     </div>
-                  </div>
-                         
+
+                    <div class="flex-item medium">
+                        <h3>Medium</h3>
+                        <img src="assets/images/medium mailbox.png" alt="medium mailbox" style="width:700px;height:700px;">
+                        <div id="medium-card" class="card">Medium Mailbox</div>
+                    </div>
+
+                    <div class="flex-item large">
+                        <h3>Large</h3>
+                        <img src="assets/images/large mailbox.png" alt="large mailbox" style="width:700px;height:700px;">
+                        <div id="large-card" class="card">Large Mailbox</div>
+                    </div>
+
+                </div>
+
             </section>
+
+            <section class="page-section">
+                <h2 id="Services">Additional Services</h2>
+            </section>
+
         </main>
+
 
         
 
-        <footer class="footer">
-            <h2>Contact Us</h2>
-            <p> Phone : (348) 645-5555</p>
-            <p> &copy 2024 by info@shipngo.com</p>
+    
+
+
+
+
+
+        <footer class = "page-footer">
+            <h2 id="Contact">Contact Us</h2>
+            <p>Address: 123 ABC Street, Austin, Texas 78753</p>
+            <p>555.555.5555</p>
+            <p>info@shipngo.com</p>
         </footer>
- 
-
-
-
-     <script src="./assets/js/script.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-
+        <script src="./assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
 
 </html>
