@@ -14,11 +14,9 @@ const mailboxRates = {
 document.getElementById("small-card").addEventListener("click", () => {
     showPopup("Small Mailbox", "Small units available for $20/month.", mailboxRates["Small Mailbox"]);
 });
-
 document.getElementById("medium-card").addEventListener("click", () => {
     showPopup("Medium Mailbox", "Medium units available for $30/month.", mailboxRates["Medium Mailbox"]);
 });
-
 document.getElementById("large-card").addEventListener("click", () => {
     showPopup("Large Mailbox", "Large units available for $35/month.", mailboxRates["Large Mailbox"]);
 });
@@ -30,17 +28,14 @@ function showPopup(title, info, rate) {
     popup.dataset.rate = rate; 
     popup.style.display = "flex";
 }
-
 closePopup.addEventListener("click", () => {
     popup.style.display = "none";
 });
-
 window.addEventListener("click", (event) => {
     if (event.target === popup) {
         popup.style.display = "none";
     }
 });
-
 //Dropdown Menu Trigger
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
