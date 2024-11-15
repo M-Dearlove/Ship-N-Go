@@ -9,6 +9,7 @@ const formPopup = document.getElementById("form-popup");
 const closeFormPopup = document.getElementById("close-form-popup");
 const reservationForm = document.getElementById("reservation-form");
 
+
 const mailboxRates = {
     "Small Mailbox": 20,
     "Medium Mailbox": 30,
@@ -22,6 +23,7 @@ document.getElementById("small-card").addEventListener("click", () => {
 document.getElementById("medium-card").addEventListener("click", () => {
     showPopup("Medium Mailbox", "Medium units available for $30/month.", mailboxRates["Medium Mailbox"]);
 });
+
 
 document.getElementById("large-card").addEventListener("click", () => {
     showPopup("Large Mailbox", "Large units available for $35/month.", mailboxRates["Large Mailbox"]);
@@ -55,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 reservePopup.style.display = "none";
 
 //Dropdown menu event listener
+
 document.querySelectorAll("#dropdown1 li a").forEach(item => {
     item.addEventListener("click", (event) => {
         const selectedTerm = event.target.textContent;
@@ -104,3 +107,4 @@ reservationForm.addEventListener("submit", (event) => {
 });
 
 });
+
