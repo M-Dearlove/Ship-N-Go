@@ -1,10 +1,14 @@
-<<<<<<< Updated upstream
-=======
 body{
     /*background-color: #007bff;*/
     background-color: #093145;
 }
->>>>>>> Stashed changes
+:root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+  }
 header {
     padding: 15px 6% 15px 0;
     display: flex;
@@ -51,8 +55,6 @@ nav a {
     padding-left: 25px;
 }
 
-<<<<<<< Updated upstream
-=======
 .page-section{
     text-align: center;
     color: #D9D9D9;
@@ -110,7 +112,30 @@ nav a {
     border-radius: 5px;
 }
 #small-card{
-    display: block;
-    align-items: center;
+    display: flex;
+    text-align: center;
+    border: 5px solid #565656;
+    ;
 }
->>>>>>> Stashed changes
+#medium-card{
+    display: flex;
+    align-items: center;
+    border: 5px solid #565656;
+}
+#large-card{
+    display: flex;
+    align-items: center;
+    border: 5px solid #565656;
+}
+.flex-container{
+text-align: center;
+background-size: cover;
+background-position: center;
+background-blend-mode: soft-light;
+min-height: 15vh;
+color: var(--light);
+padding: 2% 6%;
+display: flex;
+justify-content: center;
+align-items: center;
+}

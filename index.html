@@ -4,16 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./assets/css/style.css" />
-<<<<<<< Updated upstream
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-=======
         <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
->>>>>>> Stashed changes
         <title>Ship & Go</title>
     </head>
     <body>
-        <header>
+        <header id="Top">
             <h1>Ship-N-Go</h1>
             <nav>
                 <a href="#Top">Home</a>
@@ -28,7 +25,11 @@
         <div id="popup">
          <div class="popup-content">
             <h2 id="popup-title"></h2>
-            <p id="popup-info"></p>
+            <p id="popup-info">
+            <!--Testing span id for javascript-->
+                <span id="base-info"></span>
+                <span id="lease-term"></span>
+            </p>
             <button id="close-popup" class="close-btn">Close</button>
             <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Lease term</a>
 
@@ -52,20 +53,20 @@
 
                     <div class="flex-item small">
                         <h3>Small</h3>
-                        <img src="assets/images/small mailbox.png" alt="small mailbox" style="width:700px;height:700px;">
-                          <p id="small-card" class="card">Small Mailbox</p>
+                        <img src="assets/images/small mailbox.png"  alt="small mailbox" style="width:700px;height:700px;">
+                          <p id="small-card" class="card" style="background-color: black;">Reserve a Small Mailbox</p>
                     </div>
 
                     <div class="flex-item medium">
                         <h3>Medium</h3>
                         <img src="assets/images/medium mailbox.png" alt="medium mailbox" style="width:700px;height:700px;">
-                        <div id="medium-card" class="card">Medium Mailbox</div>
+                        <div id="medium-card" class="card" style="background-color: black;">Reserve a Medium Mailbox</div>
                     </div>
 
                     <div class="flex-item large">
                         <h3>Large</h3>
                         <img src="assets/images/large mailbox.png" alt="large mailbox" style="width:700px;height:700px;">
-                        <div id="large-card" class="card">Large Mailbox</div>
+                        <div id="large-card" class="card" font size="3" style="background-color: black;">Reserve a Large Mailbox</div>
                     </div>
 
                 </div>
@@ -83,10 +84,6 @@
             <p>555.555.5555</p>
             <p>info@shipngo.com</p>
         </footer>
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         <script src="./assets/js/script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
