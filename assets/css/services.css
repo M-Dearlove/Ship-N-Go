@@ -1,4 +1,10 @@
 body{
-    /*background-color: #007bff;*/
-    background-color: #093145;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333;
+}
+.service-section{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 }
