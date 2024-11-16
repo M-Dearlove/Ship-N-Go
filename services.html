@@ -1,13 +1,24 @@
 <!DOCTYPE = html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../assets/css/services.css" />
-        <title>Ship & Go</title>
-    </head>
-    <body>
-        <header id="Top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/services.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <title>Ship & Go</title>
+  </head>
+
+  <body>
+    <!--
+       <header id="Top">
             <h1>Ship-N-Go</h1>
             <nav>
                 <a href="index.html">Home</a>
@@ -17,18 +28,136 @@
                 <a href="#Contact">Contact Us</a>
             </nav>
         </header>
-        <main>
+    -->
+    <!--<main>
             <section class="page-section">
                 <h2 id="Services">Additional Services</h2>
                 <p>Here is a paragraph about Ship-N-Go Services</p>
             </section>
         </main>
-        <footer class = "page-footer">
-            <h2 id="Contact">Contact Us</h2>
-            <p>555.555.5555</p>
-            <p>info@shipngo.com</p>
-        </footer>
+        
+    -->
+    <!-- Nav Bar -->
+    <nav class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center-on-sm-and-down">Ship-N-Go</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#Rentals">Mailbox Rental</a></li>
+          <li><a href="#Top">Services</a></li>
+          <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <script src="./assets/js/services.js"></script>
-    </body>
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#Rentals">Mailbox Rental</a></li>
+      <li><a href="#Top">Services</a></li>
+      <li><a href="#Contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Adding functionality to the mobile nav menu -->
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
+    <main>
+      <div class="containerServices">
+        <!-- Services Section-->
+        <section class="page-section">
+          <h2 id="Services">Additional Services</h2>
+
+          <div class="row">
+            <!-- card 1 -->
+            <div class="col s12 m6 l4 center-align">
+              <div class="card small">
+                <div class="card-image">
+                  <img src="./assets/images/fax.jpeg" alt="fax machine" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Faxing and Scanning</span>
+                  <p>
+                    Our faxing and scanning services provide a quick and
+                    reliable way to send and receive documents. Whether you need
+                    to fax important papers or scan documents to create digital
+                    copies, we've got you covered.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#FaxingScanning">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="col s12 m6 l4 center-align">
+              <div class="card small">
+                <div class="card-image">
+                  <img src="./assets/images/notary2.jpg" alt="notary" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Notary Services</span>
+                  <p>
+                    We offer professional notary services for all your document
+                    needs.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#Notary">Get Notarized</a>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col s12 m6 l4 center-align">
+              <div class="card small">
+                <div class="card-image">
+                  <img src="./assets/images/shred.jpeg" alt="shredding" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Shredding Services</span>
+                  <p>
+                    Secure shredding services to protect your confidential
+                    information.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#Shredding">Shred Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container footer-container">
+        <h2 class="footer-logo center-on-md-and-down">Contact Us</h2>
+        <div class="row">
+          <div class="col s12">
+            <ul class="footer-links">
+              <li><a href="tel:+15555555555">Phone</a></li>
+              <li><a href="mailto:info@shipngo.com">Email</a></li>
+              <li>
+                <a href="#">Address: 123 ABC Street Austin, Texas 78753</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Ending scripts -->
+    <script src="./assets/js/services.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
