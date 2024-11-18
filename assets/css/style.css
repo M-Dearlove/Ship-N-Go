@@ -174,3 +174,29 @@ align-items: center;
     filter: brightness(1.2); /* Brighten the image */
     cursor: pointer; /* Change cursor to pointer */
 }
+
+/* Tablet Breakpoint (768px and below) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      flex-direction: row; /* Switch to row layout for tablets */
+      flex-wrap: wrap;    /* Allow wrapping if needed */
+    }
+  
+    .box {
+      flex: 1 1 calc(50% - 20px); /* Two boxes per row with spacing */
+      margin: 10px;
+    }
+  }
+  
+  /* Desktop Breakpoint (1025px and above) */
+  @media (min-width: 1025px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between; /* Spread content across */
+    }
+  
+    .box {
+      flex: 1 1 calc(33.33% - 20px); /* Three boxes per row */
+      margin: 10px;
+    }
+  }

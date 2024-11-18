@@ -104,7 +104,7 @@ reservationForm.addEventListener("submit", (event) => {
     // Retrieve lease total and term from popup
     const leaseTermInfo = leaseTerm.textContent;
     const leaseTotalMatch = leaseTermInfo.match(/\(Total: \$(\d+)\)/);
-    const leaseTotal = leaseTotalMatch ? leaseTotalMatch[1] : null;
+    const leaseTotal = leaseTotalMatch ? parseFloat(leaseTotalMatch[1]) : null;
     const selectedLeaseTerm = leaseTerm.dataset.selectedTerm;
 
     if (!name || !leaseTotal || !email || !selectedLeaseTerm) {
@@ -112,15 +112,26 @@ reservationForm.addEventListener("submit", (event) => {
         return;
     }
 
-    // Store name, lease total, term, and email in local storage
+    // Format lease total as currency
+    const formattedLeaseTotal = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    }).format(leaseTotal);
+
+    // Assign a random mailbox number
+    const randomMailboxNumber = `Mailbox#-${Math.floor(Math.random() * 100).toString().padStart(3, '0')}`;
+
+    // Store name, lease total, term, email, and mailbox number in local storage
     localStorage.setItem("name", name);
-    localStorage.setItem("leaseTotal", leaseTotal);
+    localStorage.setItem("leaseTotal", formattedLeaseTotal);
     localStorage.setItem("leaseTerm", selectedLeaseTerm);
     localStorage.setItem("email", email);
+    localStorage.setItem("mailboxNumber", randomMailboxNumber);
 
     alert(`Reservation submitted for ${name}!
+Assigned Mailbox: ${randomMailboxNumber}
 Email confirmation sent to ${email}!
-Lease Total: $${leaseTotal}
+Lease Total: ${formattedLeaseTotal}
 Lease Term: ${selectedLeaseTerm}`);
 
     formPopup.style.display = "none";
