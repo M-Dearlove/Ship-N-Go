@@ -3,32 +3,76 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/about.css" />
+        <link rel="stylesheet" href="./assets/css/about.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Ship & Go</title>
     </head>
     <body>
-        <header id="Top">
-            <h1>Ship-N-Go</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="#Top">About</a>
-                <a href="#Rentals">Mailbox Rental</a>
-                <a href="services.html">Services</a>
-                <a href="#Contact">Contact Us</a>
-            </nav>
-        </header>
-        <main>
-            <section class="page-section">
-                <h2 id="About">About</h2>
-                <p>Here is a paragraph about Ship-N-Go</p>
-            </section>
-        </main>
-        <footer class = "page-footer">
-            <h2 id="Contact">Contact Us</h2>
-            <p>555.555.5555</p>
-            <p>info@shipngo.com</p>
-        </footer>
-
+        <nav class="nav-wrapper">
+            <div class="container">
+              <a href="#" class="brand-logo center-on-sm-and-down">Ship-N-Go</a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                <i class="material-icons">menu</i>
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#Rentals">Mailbox Rental</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+      
+          <ul class="sidenav" id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#Rentals">Mailbox Rental</a></li>
+            <li><a href="#Top">Services</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+          </ul>
+      
+          <!-- Adding functionality to the mobile nav menu -->
+          <script>
+            $(document).ready(function () {
+              $(".sidenav").sidenav();
+            });
+          </script>
+        <section class="page-section">
+            <div class="content">
+                <div class="image">
+                    <img src="assets/images/second rental.jpg" alt="Package delivery" align: right/>
+                </div>
+                <div class="text">
+                    <h2>Let Us Help Manage Your Mail And Packages</h2>
+                    <p>Don't want your packages sitting in the rain?</p>
+                    <ul>
+                        <li>The Ship-N-Go Store offers various Mailbox sizes and  <a href="services.html" id="link">services.</a></li>
+                        <li>Our location keep your mail secure and offer 24-hour access</li>
+                        <li>You can permit people to pick up your mail by lending them the key to your mailbox</li>
+                        <li>package and mail receipt comfirmation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="container footer-container">
+              <h2 id="Contact" class="footer-logo center-on-md-and-down">Contact Us</h2>
+              <div class="row">
+                <div class="col s12">
+                  <ul class="footer-links">
+                    <li><a href="tel:+15555555555">Phone : 555.555.5555</a></li>
+                    <li><a href="mailto:info@shipngo.com">Email : info@shipngo.com</a></li>
+                    <li>
+                      <a href="#">Address: 123 ABC Street Austin, Texas 78753</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
         <script src="./assets/js/about.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>

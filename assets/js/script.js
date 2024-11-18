@@ -9,7 +9,6 @@ const formPopup = document.getElementById("form-popup");
 const closeFormPopup = document.getElementById("close-form-popup");
 const reservationForm = document.getElementById("reservation-form");
 
-
 const mailboxRates = {
     "Small Mailbox": 20,
     "Medium Mailbox": 30,
@@ -23,7 +22,6 @@ document.getElementById("small-card").addEventListener("click", () => {
 document.getElementById("medium-card").addEventListener("click", () => {
     showPopup("Medium Mailbox", "Medium units available for $30/month.", mailboxRates["Medium Mailbox"]);
 });
-
 
 document.getElementById("large-card").addEventListener("click", () => {
     showPopup("Large Mailbox", "Large units available for $35/month.", mailboxRates["Large Mailbox"]);
@@ -39,25 +37,27 @@ function showPopup(title, info, rate) {
 
 closePopup.addEventListener("click", () => {
     popup.style.display = "none";
+    document.getElementById("popup-overlay").style.display = "none"; // Hide the overlay
 });
 
 window.addEventListener("click", (event) => {
-    if (event.target === popup) {
+    const overlay = document.getElementById("popup-overlay");
+    if (event.target === overlay) {
         popup.style.display = "none";
+        overlay.style.display = "none"; // Hide the overlay
     }
 });
 
-//Dropdown Menu Trigger
+// Dropdown Menu Trigger
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.Dropdown.init(elems, {});
-  });
+});
 
-//Initially hides the reserve button
+// Initially hides the reserve button
 reservePopup.style.display = "none";
 
-//Dropdown menu event listener
-
+// Dropdown menu event listener
 document.querySelectorAll("#dropdown1 li a").forEach(item => {
     item.addEventListener("click", (event) => {
         const selectedTerm = event.target.textContent;
@@ -82,10 +82,10 @@ document.querySelectorAll("#dropdown1 li a").forEach(item => {
                 break;
         }
         leaseTerm.textContent = `- Lease term: ${selectedTerm} (Total: $${totalCost})`;
-        
+        leaseTerm.dataset.selectedTerm = selectedTerm; // Store the selected term in a dataset attribute
         reservePopup.style.display = "inline-block";
-
     });
+});
 
 reservePopup.addEventListener("click", () => {
     formPopup.style.display = "flex";
@@ -101,10 +101,27 @@ reservationForm.addEventListener("submit", (event) => {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
 
-    alert(`Reservation submitted for ${name}! 
-Email confirmation sent to ${email}!`);
+    // Retrieve lease total and term from popup
+    const leaseTermInfo = leaseTerm.textContent;
+    const leaseTotalMatch = leaseTermInfo.match(/\(Total: \$(\d+)\)/);
+    const leaseTotal = leaseTotalMatch ? leaseTotalMatch[1] : null;
+    const selectedLeaseTerm = leaseTerm.dataset.selectedTerm;
+
+    if (!name || !leaseTotal || !email || !selectedLeaseTerm) {
+        alert("Name, lease total, lease term, or email missing. Please check your inputs.");
+        return;
+    }
+
+    // Store name, lease total, term, and email in local storage
+    localStorage.setItem("name", name);
+    localStorage.setItem("leaseTotal", leaseTotal);
+    localStorage.setItem("leaseTerm", selectedLeaseTerm);
+    localStorage.setItem("email", email);
+
+    alert(`Reservation submitted for ${name}!
+Email confirmation sent to ${email}!
+Lease Total: $${leaseTotal}
+Lease Term: ${selectedLeaseTerm}`);
 
     formPopup.style.display = "none";
-});
-
 });

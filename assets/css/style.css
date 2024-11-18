@@ -164,3 +164,13 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
+/* Hover effect for images */
+.flex-container img {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.flex-container img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    filter: brightness(1.2); /* Brighten the image */
+    cursor: pointer; /* Change cursor to pointer */
+}
