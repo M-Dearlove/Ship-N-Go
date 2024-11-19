@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>Ship & Go</title>
+    </head>
+    <body>
+    <nav class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center-on-sm-and-down">Ship-N-Go</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#Rentals">Mailbox Rental</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#Rentals">Mailbox Rental</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#Contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Adding functionality to the mobile nav menu -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
+        <main>
+        
+        <!--Form Popup Structure-->
+        <div id="form-popup" style="display: none;">
+            <div class="form-content">
+                <h2>Reserve Mailbox</h2>
+                <form id="reservation-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+
+                    <button type="submit">Submit Reservation</button>
+                </form>
+                <button id="close-form-popup" class="close-btn">Close</button>
+            </div>
+        </div>
+            <!-- Popup Container -->
+        <div id="popup">
+         <div class="popup-content">
+            <h2 id="popup-title"></h2>
+            <p id="popup-info">
+            <!--Testing span id for javascript-->
+                <span id="base-info"></span>
+                <span id="lease-term"></span>
+            </p>
+            <button id="close-popup" class="close-btn">Close</button>
+            <!--Reserve Button in First Popup-->
+            <button id="reserve-popup" class="reserve-btn">Reserve</button>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Lease term</a>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Monthly</a></li>
+                <li><a href="#!">3 months</a></li>
+                <li><a href="#!">6 months</a></li>
+                <li><a href="#!">9 months</a></li>
+                <li><a href="#!">Yearly</a></li>
+            </ul>
+         </div>
+        </div>
+            <section class="page-section">
+
+                <h2 id="Rentals">Mailbox Rentals</h2>
+                <img src="assets/images/mailboxbank.png" alt="mailboxbank" style="width:800px;height:800px;">
+
+                <div class="flex-container">
+
+                    <div class="flex-item small">
+                        <h3>Small</h3>
+                        <img src="assets/images/small mailbox.png"  alt="small mailbox" style="width:700px;height:700px;">
+                          <p id="small-card" class="card" style="background-color: black;">Reserve a Small Mailbox</p>
+                    </div>
+
+                    <div class="flex-item medium">
+                        <h3>Medium</h3>
+                        <img src="assets/images/medium mailbox.png" alt="medium mailbox" style="width:700px;height:700px;">
+                        <div id="medium-card" class="card" style="background-color: black;">Reserve a Medium Mailbox</div>
+                    </div>
+
+                    <div class="flex-item large">
+                        <h3>Large</h3>
+                        <img src="assets/images/large mailbox.png" alt="large mailbox" style="width:700px;height:700px;">
+                        <div id="large-card" class="card" style="background-color: black;">Reserve a Large Mailbox</div>
+                    </div>
+                    
+                </div>
+
+            </section>
+
+        </main>
+        <footer class = "page-footer">
+            <h2 id="Contact">Contact Us</h2>
+            <p>Address: 123 ABC Street, Austin, Texas 78753</p>
+            <p>555.555.5555</p>
+            <p>info@shipngo.com</p>
+        </footer>
+        <script src="./assets/js/script.js"></script>
+
+    </body>
+</html>
