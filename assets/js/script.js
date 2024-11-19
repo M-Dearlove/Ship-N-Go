@@ -8,7 +8,11 @@ const reservePopup = document.getElementById("reserve-popup");
 const formPopup = document.getElementById("form-popup");
 const closeFormPopup = document.getElementById("close-form-popup");
 const reservationForm = document.getElementById("reservation-form");
+const emailEl = document.getElementById('email');
+const termEl = document.getElementById('selectedTerm');
+const costEl = document.getElementById('totalCost');
 
+let reservationDetails = [];
 
 const mailboxRates = {
     "Small Mailbox": 20,
@@ -95,6 +99,28 @@ closeFormPopup.addEventListener("click", () => {
     formPopup.style.display = "none";
 });
 
+function saveLastReservation(){
+    const reservationDetails = {
+        emailEl: emailEl.value,
+        termEl: termEl.value,
+        costEl: costEl.value,
+    };
+
+    reservationDetails.push(reservationDetails);
+
+    localStorage.setItem('lastReservation', JSON.stringify(reservationDetails));
+}
+
+function renderDetails() {
+    const lastReservation = JSON.parse(localStorage.getItem('lastReservation'));
+
+    if (lastReservation.length){
+        document.getElementById('saved-email').innerHTML = lastReservation[lastReservation.length-1].emailEl;
+        document.getElementById('saved-term').innerHTML = lastReservation[lastReservation.length-1].termEl;
+        document.getElementById('saved-cost').innerHTML = lastReservation[lastReservation.length-1].costEl;
+    }
+}
+
 reservationForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -105,6 +131,8 @@ reservationForm.addEventListener("submit", (event) => {
 Email confirmation sent to ${email}!`);
 
     formPopup.style.display = "none";
+    saveLastReservation();
+    renderDetails();
 });
 
 });
